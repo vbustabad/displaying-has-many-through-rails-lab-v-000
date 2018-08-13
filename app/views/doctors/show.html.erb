@@ -4,4 +4,3 @@
   <span><%= appointment.appointment_datetime.to_formatted_s(:long) %></span>
   <span><%= link_to appointment.patient.name, patient_path(appointment.patient) %></span>
 <% end %>
-

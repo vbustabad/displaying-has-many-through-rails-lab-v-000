@@ -1,6 +1,6 @@
 <h1>Doctor#show</h1>
 
 <% @doctor.appointments.each do |appointment| %>
-  <span><%= appointment.appointment_datetime.to_formatted_s(:long) %></span>
-  <span><%= link_to appointment.patient.name, patient_path(appointment.patient) %></span>
+  <span><%= appointment.appointment_datetime.to_formatted_s(:long) %></span><br />
+  <span><%= link_to appointment.patient.name, patient_path(appointment.patient) %></span><br />
 <% end %>

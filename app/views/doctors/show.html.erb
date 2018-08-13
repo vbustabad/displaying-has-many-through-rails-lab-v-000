@@ -3,6 +3,6 @@
 <ol>
   <% @doctor.appointments.each do |appointment| %>
     <li><%= appointment.appointment_datetime %></li>
-    <li><%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></li>
+    <li><%= link_to appointment.patient.name, patient_path(appointment.patient) %></li>
   <% end %>
 </ol>

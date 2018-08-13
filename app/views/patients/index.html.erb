@@ -1,7 +1,7 @@
 <h1>Patient#index</h1>
 
-<ol>
+<ul>
   <% @patients.each do |patient| %>
     <li><%= patient.name %>: <%= patient.appointments.count %></li>
   <% end %>
-</ol>
+</ul>

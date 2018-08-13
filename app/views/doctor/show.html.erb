@@ -1,2 +1,8 @@
 <h1>Doctor#show</h1>
-<p>Find me in app/views/doctor/show.html.erb</p>
+
+<ol>
+  <% @doctor.appointments.each do |appointment| %>
+    <li><%= appointment.appointment_datetime %></li>
+  <% end %>
+</ol>
+

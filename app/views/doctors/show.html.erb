@@ -1,10 +1,7 @@
 <h1>Doctor#show</h1>
 
-<ol>
-  <% @doctor.appointments.each do |appointment| %>
-    <li>
-    <%= appointment.appointment_datetime.to_formatted_s(:long) %>
-    <%= link_to appointment.patient.name, patient_path(appointment.patient) %>
-    </li>
-  <% end %>
-</ol>
+<% @doctor.appointments.each do |appointment| %>
+  <span><%= appointment.appointment_datetime.to_formatted_s(:long) %></span>
+  <span><%= link_to appointment.patient.name, patient_path(appointment.patient) %></span>
+<% end %>
+

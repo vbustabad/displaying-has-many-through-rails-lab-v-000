@@ -1,1 +1,7 @@
 <h1>Patient#show</h1>
+
+<ol>
+  <% @patient.appointments.each do |appointment| %>
+    <li><%= appointment.appointment_datetime %></li>
+  <% end %>
+</ol>

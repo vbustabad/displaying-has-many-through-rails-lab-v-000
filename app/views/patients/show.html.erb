@@ -1,6 +1,6 @@
 <h1>Patient#show</h1>
 
 <% @patient.appointments.each do |appointment| %>
-  <p><%= appointment.appointment_datetime.to_formatted_s(:long) %></p>
+  <p><%= appointment.appointment_datetime.strftime("%B %d, %Y") %></p>
   <p><%= link_to appointment.doctor.name, doctor_path(appointment.doctor) %></p><br />
 <% end %>

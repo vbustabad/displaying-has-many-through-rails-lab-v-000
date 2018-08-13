@@ -2,7 +2,9 @@
 
 <ol>
   <% @doctor.appointments.each do |appointment| %>
-    <li><%= appointment.appointment_datetime.to_formatted_s(:long) %></li><br />
-    <span><%= link_to appointment.patient.name, patient_path(appointment.patient) %></span><br />
+    <li>
+    <%= appointment.appointment_datetime.to_formatted_s(:long) %>
+    <%= link_to appointment.patient.name, patient_path(appointment.patient) %>
+    </li>
   <% end %>
 </ol>
